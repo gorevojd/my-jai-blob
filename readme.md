@@ -5,7 +5,8 @@ on the standard `Basic` module.
 
 Import with `#import "MyBasic/MyBlob";` when installed inside MyBasic, or
 `#import "MyBlob";` when installed directly on the compiler's module search path.
-MyBasic does not re-export this module; import it explicitly.
+MyBasic re-exports this module, so `#import "MyBasic";` also exposes its API.
+The standalone module remains independent of MyBasic.
 
 ```jai
 #import "MyBasic/MyBlob";
