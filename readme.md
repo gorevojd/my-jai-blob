@@ -8,8 +8,6 @@ No other `my-jai-*` modules are required.
 
 Jai standard library: `Basic`.
 
-The optional local checks in `build_checks.jai` also use Jai's `Compiler` module.
-
 ## Usage
 
 Import with `#import "my-jai-blob";` and add the directory containing `my-jai-blob` to the compiler module search path.
@@ -46,10 +44,3 @@ defer clear_blob(*copy);
 
 This replaces the former `Binary`, `BinaryView` and `*_binary*` APIs with `Blob`,
 `BlobView` and `*_blob*`. Byte layout and buffer behavior are unchanged.
-
-Run the standalone checks from a checkout with an existing absolute output directory:
-
-```text
-jai build_checks.jai -output_path <output-directory>
-<output-directory>/blob_checks.exe
-```
