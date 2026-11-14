@@ -1,4 +1,4 @@
-// Import with #import "MyBasic/MyBlob"; or #import "MyBlob"; when installed as a top-level module.
+// Import with #import "my-jai-blob"; and add its parent directory to the module search path.
 // Owns its storage. Struct copies share ownership; clear the storage only once.
 Blob :: struct {
     data: [..]u8;

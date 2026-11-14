@@ -1,15 +1,23 @@
-# MyBlob
+# my-jai-blob
 
-Owned byte buffers and borrowed mutable views for Jai. The module depends only
-on the standard `Basic` module.
+Owned byte buffers and borrowed mutable views for Jai.
 
-Import with `#import "MyBasic/MyBlob";` when installed inside MyBasic, or
-`#import "MyBlob";` when installed directly on the compiler's module search path.
-MyBasic re-exports this module, so `#import "MyBasic";` also exposes its API.
-The standalone module remains independent of MyBasic.
+## Dependencies
+
+No other `my-jai-*` modules are required.
+
+Jai standard library: `Basic`.
+
+The optional local checks in `build_checks.jai` also use Jai's `Compiler` module.
+
+## Usage
+
+Import with `#import "my-jai-blob";` and add the directory containing `my-jai-blob` to the compiler module search path.
+my-jai-core re-exports this module, so `#import "my-jai-core";` also exposes its API.
+The standalone module remains independent of my-jai-core.
 
 ```jai
-#import "MyBasic/MyBlob";
+#import "my-jai-blob";
 
 bytes := make_blob(16, 0xAB);
 defer clear_blob(*bytes);
